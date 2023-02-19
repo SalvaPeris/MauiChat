@@ -14,6 +14,7 @@ namespace MauiChat.Infrastructure.Persistence.Services
 	public class SecurityService : ISecurityService
 	{
 		private readonly UserManager<User> _userManager;
+		private readonly RoleManager<Role> _roleManager;
 		private readonly IConfiguration _configuration;
 		
 		public SecurityService(
