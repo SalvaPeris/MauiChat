@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MauiChat.Application.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace MauiChat.Application.DTOs.Requests.Users
 {
@@ -6,10 +7,10 @@ namespace MauiChat.Application.DTOs.Requests.Users
 	{
 		[Required]
 		[EmailAddress]
-		public string Email { get; set; }
+		public string? Email { get; set; }
 
 		[Required]
 		[Password]
-		public string Password { get; set; }
+		public string? Password { get; set; }
 	}
 }

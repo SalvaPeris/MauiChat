@@ -10,4 +10,8 @@
     <Folder Include="DTOs\Responses\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MauiChat.Domain\MauiChat.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

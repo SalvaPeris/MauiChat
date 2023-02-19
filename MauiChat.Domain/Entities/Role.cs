@@ -8,6 +8,6 @@ namespace MauiChat.Domain.Entities
 
 		public bool IsActive { get; set; } = true;
 
-		public ICollection<User>? Users { get; set; }
+		public ICollection<User> Users { get; set; }
 	}
 }

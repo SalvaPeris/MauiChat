@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiChat.Application", "Mau
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiChat.Infrastructure", "MauiChat.Infrastructure\MauiChat.Infrastructure.csproj", "{003CC86F-7C17-46BC-8488-469437F9254C}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiChat.Platforms", "MauiChat.Platforms\MauiChat.Platforms.csproj", "{600A696B-E095-4620-8A3E-CBE824B99EF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{003CC86F-7C17-46BC-8488-469437F9254C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003CC86F-7C17-46BC-8488-469437F9254C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003CC86F-7C17-46BC-8488-469437F9254C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{600A696B-E095-4620-8A3E-CBE824B99EF8}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

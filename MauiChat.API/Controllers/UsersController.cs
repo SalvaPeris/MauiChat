@@ -1,5 +1,7 @@
 ﻿using MauiChat.Application.Contracts;
 using MauiChat.Application.DTOs.Requests.Users;
+using MauiChat.Application.Extensions;
+using MauiChat.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +33,7 @@ namespace MauiChat.API.Controllers
 			{
 				return Ok(new
 				{
-					AccessToken = await _securityService.LoginUserWithEmail(request.Email, request.Password)
+					AccessToken = await _securityService.LoginUserWithEmail(request.Email!, request.Password!)
 				});
 			}
 			catch (UnauthorizedAccessException)
@@ -44,14 +46,12 @@ namespace MauiChat.API.Controllers
 		/// Endpoint to get current user profile
 		/// </summary>
 		/// <returns></returns>
-		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpGet("Me")]
 		[ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-		public async Task<IActionResult> GetMe()
+		public IActionResult GetMe()
 		{
-			var user = await _securityService.GetUserAsync(User.GetUserId());
-
-			return Ok(_mapper.Map<CurrentUserResponse>(user));
+			//var user = await _securityService.GetUserAsync(User.GetUserId());
+			return Ok("Hello, you are authenticated!");
 		}
 	}
 }

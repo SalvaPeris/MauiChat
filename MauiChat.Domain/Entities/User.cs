@@ -1,5 +1,4 @@
-﻿using MauiChat.Domain.Base;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace MauiChat.Domain.Entities
@@ -10,7 +9,7 @@ namespace MauiChat.Domain.Entities
 
 		public string LastName { get; set; } = default!;
 
-		public string Username { get; set; } = default!;
+		public string UserName { get; set; } = default!;
 
 		public DateTime? EntryDate { get; set; }
 
@@ -22,6 +21,6 @@ namespace MauiChat.Domain.Entities
 
 		public Role? Role => this.Roles?.SingleOrDefault();
 
-		public ICollection<Role>? Roles { get; set; }
+		public ICollection<Role> Roles { get; set; }
 	}
 }
