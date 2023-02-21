@@ -1,19 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:strings="clr-namespace:MauiChat.Platforms.Resources.Strings"
-			 x:Class="MauiChat.Platforms.Views.ChatPage">
+			 xmlns:vm="clr-namespace:MauiChat.Platforms.ViewModels"
+			 xmlns:m="clr-namespace:MauiChat.Platforms.Models"
+			 x:Class="MauiChat.Platforms.Views.ChatPage"
+			 x:DataType="vm:ChatViewModel">
+
     <ScrollView>
         <VerticalStackLayout
-			Spacing="60"
+			Spacing="25"
 			Padding="30,0"
 			VerticalOptions="Center">
-            
-            <Label
-				Text="{x:Static strings:AppResources.MyChats}"
-				SemanticProperties.HeadingLevel="Level1"
-				FontSize="60"
-				HorizontalOptions="Start" />
+            <Label Text="Chat"
+			SemanticProperties.HeadingLevel="Level1"
+			FontSize="42"
+			HorizontalOptions="Start" />
+            <RefreshView IsRefreshing="{Binding IsRefreshing}" Command="{Binding RefreshingCommand}">
+            <Label Text="Chat"
+			SemanticProperties.HeadingLevel="Level1"
+			FontSize="32"
+			HorizontalOptions="Start" />
+            <CollectionView ItemsSource="{Binding Items}" RemainingItemsThreshold="10" RemainingItemsThresholdReachedCommand="{Binding LoadMoreCommand}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="m:SampleItem">
+                        <Frame Margin="4" Padding="12">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:ChatViewModel}}, Path=GoToDetailsCommand}" CommandParameter="{Binding .}" />
+                            </Frame.GestureRecognizers>
+                            <Label Text="{Binding Title}" FontSize="Large" TextColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Black}}" />
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            </RefreshView>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

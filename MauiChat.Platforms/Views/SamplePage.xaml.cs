@@ -1,8 +1,8 @@
 ﻿namespace MauiChat.Platforms.Views;
 
-public partial class ProfilePage : ContentPage
+public partial class SamplePage : ContentPage
 {
-	public ProfilePage(ProfileViewModel viewModel)
+	public SamplePage(SampleViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;

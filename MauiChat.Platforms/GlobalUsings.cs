@@ -1,4 +1,10 @@
-﻿global using Plugin.Maui.Audio;
+﻿global using CommunityToolkit.Maui;
+global using Plugin.Maui.Audio;
+global using MauiChat.Platforms.Models;
+global using MauiChat.Platforms.Services;
+global using CommunityToolkit.Mvvm.ComponentModel;
+global using CommunityToolkit.Mvvm.Input;
+global using MauiChat.Platforms.ViewModels;
 global using MauiChat.Platforms.Views;
 global using System.Collections.ObjectModel;
 global using System.ComponentModel;

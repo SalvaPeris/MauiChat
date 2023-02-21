@@ -2,11 +2,10 @@
 
 public partial class LocalizationPage : ContentPage
 {
-	public LocalizationPage()
+	public LocalizationPage(LocalizationViewModel viewModel)
 	{
 		InitializeComponent();
-
-		SetFromCodeBehind.Text = MauiChat.Platforms.Resources.Strings.AppResources.MyChats;
+		BindingContext = viewModel;
 	}
 
 }

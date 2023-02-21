@@ -3,23 +3,30 @@
 	x:Class="MauiChat.Platforms.AppShell"
 	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:strings="clr-namespace:MauiChat.Platforms.Resources.Strings"
 	xmlns:views="clr-namespace:MauiChat.Platforms.Views"
 	xmlns:local="clr-namespace:MauiChat.Platforms"
-    Shell.NavBarIsVisible="false">
+    Shell.NavBarIsVisible="False">
 
 	<TabBar>
 		<ShellContent
-			Title="{x:Static strings:AppResources.MyChats}"
-			Icon="iconblank.png"
+			Title="Chat"
+			Icon="iconlistdetail.png"
 			ContentTemplate="{DataTemplate views:ChatPage}" />
 		<ShellContent
-			Title="{x:Static strings:AppResources.MyChats}"
+			Title="Home"
+			Icon="iconblank.png"
+			ContentTemplate="{DataTemplate views:HomePage}" />
+		<ShellContent
+			Title="Profile"
+			Icon="iconblank.png"
+			ContentTemplate="{DataTemplate views:ProfilePage}" />
+		<ShellContent
+			Title="Localization"
 			Icon="iconlocalization.png"
 			ContentTemplate="{DataTemplate views:LocalizationPage}" />
 		<ShellContent
-			Title="{x:Static strings:AppResources.MyProfile}"
-			Icon="iconblank.png"
-			ContentTemplate="{DataTemplate views:ProfilePage}" />
+			Title="Sample"
+			Icon="iconsample.png"
+			ContentTemplate="{DataTemplate views:SamplePage}" />
 	</TabBar>
 </Shell>

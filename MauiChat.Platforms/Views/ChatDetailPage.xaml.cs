@@ -1,8 +1,8 @@
 ﻿namespace MauiChat.Platforms.Views;
 
-public partial class ProfilePage : ContentPage
+public partial class ChatDetailPage : ContentPage
 {
-	public ProfilePage(ProfileViewModel viewModel)
+	public ChatDetailPage(ChatDetailViewModel viewModel)
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
